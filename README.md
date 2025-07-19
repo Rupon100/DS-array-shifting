@@ -2,5 +2,9 @@
 ## DS(CLANG)
 
 --------topic done--------
-- Elements shifting in a Array
-- 
+- Elements shifting in a Array (inserting)
+- deletion 
+- binary search
+- linear search
+
+ 
