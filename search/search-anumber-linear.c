@@ -19,7 +19,7 @@ int main(){
     printf("\n");
     
     while(initial <= end){
-        int mid = initial + end; // this is mid value
+        int mid = initial + end / 2; // this is mid value
         if(arr[mid] == target){
             printf("Target value %d is founded: ", target);
             count++;
