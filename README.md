@@ -6,7 +6,7 @@
 - deletion 
 - binary search
 - linear search
-- sort (...)
-- Stack(array + ..)
+- sort (bubble, insertion, selection)
+- Stack(array)
 
  
