@@ -1,7 +1,7 @@
 # CSE242.7
 ## DS(CLANG)
 
---------topic done--------
+--------topic--------
 - Elements shifting in a Array (inserting)
 - deletion 
 - binary search
