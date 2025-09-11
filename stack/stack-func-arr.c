@@ -1,73 +1,192 @@
+// #include <stdio.h>
+// #define MAX_SIZE 5
+
+// int top = -1;
+// int stack[MAX_SIZE];
+
+// int isEmpty()
+// {
+//     return top == -1;
+// }
+
+// int isFull()
+// {
+//     return top == MAX_SIZE - 1;
+// }
+
+// void push(int val)
+// {
+//     if (isFull())
+//     {
+//         printf("Over Flow!!!");
+//     }
+//     else
+//     {
+//         top++;
+//         stack[top] = val;
+//     }
+// }
+
+// void pop()
+// {
+//     if (isEmpty())
+//     {
+//         printf("Underflow");
+//     }
+//     else
+//     {
+//         top--;
+//     }
+// }
+
+// void display()
+// {
+//     if (isEmpty())
+//     {
+//         printf("Stack is empty!");
+//     }
+//     else
+//     {
+//         printf("Stack elements are: ");
+//         for (int i = 0; i <= top; i++)
+//         {
+//             printf("%d ", stack[i]);
+//         }
+//         printf("\n");
+//     }
+// }
+
+// int main()
+// {
+
+//     push(4);
+//     push(5);
+//     push(6);
+
+//     display();
+
+//     pop();
+
+//     display();
+
+//     return 0;
+// }
+
 #include <stdio.h>
-#define MAX_SIZE 5
+#include <stdlib.h>
+#define SIZE 5
 
 int top = -1;
-int stack[MAX_SIZE];
+int stack[SIZE];
 
-int isEmpty()
-{
-    return top == -1;
-}
-
+// int isFull
 int isFull()
 {
-    return top == MAX_SIZE - 1;
+    if (top == SIZE - 1)
+        return 1;
+    return 0;
 }
 
-void push(int val)
+// int is emtpy
+int isEmpty()
 {
+    if (top == -1)
+        return 1;
+    return 0;
+}
+
+// void push
+void push()
+{
+    int x;
     if (isFull())
     {
-        printf("Over Flow!!!");
+        printf("\nOverflow!");
     }
     else
     {
-        top++;
-        stack[top] = val;
+        printf("Enter the element: ");
+        scanf("%d", &x);
+        top += 1;
+        stack[top] = x;
     }
 }
 
+// void pop
 void pop()
 {
     if (isEmpty())
     {
-        printf("Underflow");
+        printf("\nUnderflow!");
     }
     else
     {
-        top--;
+        top -= 1;
     }
 }
 
-void display()
+// void show
+void show()
 {
     if (isEmpty())
     {
-        printf("Stack is empty!");
+        printf("\nUnderflow");
     }
     else
     {
-        printf("Stack elements are: ");
+        printf("\nStack are: ");
         for (int i = 0; i <= top; i++)
         {
             printf("%d ", stack[i]);
         }
-        printf("\n");
+    }
+}
+
+// int peek
+int peek()
+{
+    if (isEmpty())
+    {
+        printf("\nUnderflow!");
+    }
+    else
+    {
+        printf("Top Value: %d", stack[top]);
     }
 }
 
 int main()
 {
+    int choice;
 
-    push(4);
-    push(5);
-    push(6);
+    printf("\nEnter option: ");
+    printf("\n1 for push\n2for pop\n3 for peek\n4 for display\n5 for peek\n6 for exit");
 
-    display();
-
-    pop();
-
-    display();
+    while (1)
+    {
+        printf("\nEnter the choice: ");
+        scanf("%d", &choice);
+        switch (choice)
+        {
+        case 1:
+            push();
+            break;
+        case 2:
+            pop();
+            break;
+        case 3:
+            peek();
+            break;
+        case 4:
+            show();
+            break;
+        case 5:
+            peek();
+        break case 6:
+            exit(0);
+            default : printf("\nInvalid Option Choice!");
+        }
+    }
 
     return 0;
 }
