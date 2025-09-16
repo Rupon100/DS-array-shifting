@@ -8,5 +8,7 @@
 - linear search
 - sort (bubble, insertion, selection)
 - Stack(array)
+- queue
+- linked list
 
  
