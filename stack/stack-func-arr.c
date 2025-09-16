@@ -182,7 +182,8 @@ int main()
             break;
         case 5:
             peek();
-        break case 6:
+            break;
+        case 6:
             exit(0);
             default : printf("\nInvalid Option Choice!");
         }
