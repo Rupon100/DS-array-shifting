@@ -195,7 +195,7 @@ void insertAtEnd(int value){
     temp->next = newNode;
 }
 
-// insertion at any postition
+// insertion at any position
 void insertAtAnyPosition(int value, int pos){
     struct node *newNode = (struct node*)malloc(sizeof(struct node));
     newNode->data = value;
@@ -246,7 +246,7 @@ void deleteAtEnd(){
     temp->next = NULL;
 }
 
-// delete at any postiion
+// delete at any position
 void deleteAtAnyPos(int pos){
     if(head == NULL) return;
     
@@ -291,11 +291,13 @@ void display(){
 void search(int key){
     struct node *temp = head;
     while(temp != NULL){
-        if(temp->data == key){
-            printf("\n%d is Found!", key);
-            return;
-        }
+    if(temp->data == key){
+        printf("\n%d is Found!", key);
+        return;
     }
+    temp = temp->next;  
+}
+
     printf("\nNot found!");
 }
 
